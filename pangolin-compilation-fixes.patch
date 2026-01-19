@@ -1,0 +1,47 @@
+diff --git a/components/pango_image/src/image_io_bmp.cpp b/components/pango_image/src/image_io_bmp.cpp
+index 53c724b5..2719dc4e 100644
+--- a/components/pango_image/src/image_io_bmp.cpp
++++ b/components/pango_image/src/image_io_bmp.cpp
+@@ -1,4 +1,5 @@
+ #include <fstream>
++#include <cstdint>
+ #include <pangolin/image/typed_image.h>
+ 
+ namespace pangolin {
+diff --git a/components/pango_image/src/image_io_jpg.cpp b/components/pango_image/src/image_io_jpg.cpp
+index 28002ecf..b1449c69 100644
+--- a/components/pango_image/src/image_io_jpg.cpp
++++ b/components/pango_image/src/image_io_jpg.cpp
+@@ -1,5 +1,6 @@
+ #include <algorithm>
+ #include <fstream>
++#include <cstdint>
+ 
+ 
+ #include <pangolin/platform.h>
+diff --git a/components/pango_packetstream/include/pangolin/log/packetstream_tags.h b/components/pango_packetstream/include/pangolin/log/packetstream_tags.h
+index 2798fecc..2adbd299 100644
+--- a/components/pango_packetstream/include/pangolin/log/packetstream_tags.h
++++ b/components/pango_packetstream/include/pangolin/log/packetstream_tags.h
+@@ -1,5 +1,6 @@
+ #pragma once
+ 
++#include <cstdint>
+ #include <string>
+ 
+ namespace pangolin {
+diff --git a/components/pango_video/include/pangolin/video/drivers/ffmpeg_common.h b/components/pango_video/include/pangolin/video/drivers/ffmpeg_common.h
+index 508ee7d6..ae5c3b44 100644
+--- a/components/pango_video/include/pangolin/video/drivers/ffmpeg_common.h
++++ b/components/pango_video/include/pangolin/video/drivers/ffmpeg_common.h
+@@ -55,10 +55,6 @@ inline std::string FfmpegFmtToString(const AVPixelFormat fmt)
+     TEST_PIX_FMT_RETURN(YUVJ420P);
+     TEST_PIX_FMT_RETURN(YUVJ422P);
+     TEST_PIX_FMT_RETURN(YUVJ444P);
+-#ifdef FF_API_XVMC
+-    TEST_PIX_FMT_RETURN(XVMC_MPEG2_MC);
+-    TEST_PIX_FMT_RETURN(XVMC_MPEG2_IDCT);
+-#endif
+     TEST_PIX_FMT_RETURN(UYVY422);
+     TEST_PIX_FMT_RETURN(UYYVYY411);
+     TEST_PIX_FMT_RETURN(BGR8);
